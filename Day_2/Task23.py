@@ -40,9 +40,12 @@ def game():
                         answer = input('To nie ta liczba. Czy chcesz spróbować jeszcze raz? ')
                         if answer == 'tak':
                             game_count += 1
+                            print('Liczba pozostałych szans: ' + str(4-game_count))
                             break
                         elif answer == 'nie':
+                            print()
                             print('Zakończyłeś grę. Dziękujemy za zabawę!')
+                            print('Liczba, o którą chodziło to: ' + str(computer_number))
                             return False
                         else:
                             print('Odpowiedź w złym formacie. Dostępne formy odpowiedzi: tak/nie')
